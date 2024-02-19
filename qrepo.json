@@ -1,0 +1,76 @@
+{
+	"name": "minbox",
+	"author": "Nathanne Isip",
+	"version": "v0.0.1",
+	"description": "BusyBox-like programs written in pure Rust.",
+	"git": "https://github.com/nthnn/minbox.git",
+	"scripts": {
+		"build-del": [
+			"mkdir -p dist",
+			"cd del",
+			"cargo build --release",
+			"cd ..",
+			"cp del/target/release/del dist/"
+		],
+		"build-dir": [
+			"mkdir -p dist",
+			"cd dir",
+			"cargo build --release",
+			"cd ..",
+			"cp dir/target/release/dir dist/"
+		],
+		"build-dt": [
+			"mkdir -p dist",
+			"cd dt",
+			"cargo build --release",
+			"cd ..",
+			"cp dt/target/release/dt dist/"
+		],
+		"build-f": [
+			"mkdir -p dist",
+			"cd f",
+			"cargo build --release",
+			"cd ..",
+			"cp f/target/release/f dist/"
+		],
+		"build-md": [
+			"mkdir -p dist",
+			"cd md",
+			"cargo build --release",
+			"cd ..",
+			"cp md/target/release/md dist/"
+		],
+		"build-mf": [
+			"mkdir -p dist",
+			"cd mf",
+			"cargo build --release",
+			"cd ..",
+			"cp mf/target/release/mf dist/"
+		],
+		"build-r": [
+			"mkdir -p dist",
+			"cd r",
+			"cargo build --release",
+			"cd ..",
+			"cp r/target/release/r dist/"
+		],
+		"build-say": [
+			"mkdir -p dist",
+			"cd say",
+			"cargo build --release",
+			"cd ..",
+			"cp say/target/release/say dist/"
+		],
+		"build": [
+			"rm -rf dist",
+			"qrepo run build-del",
+			"qrepo run build-dir",
+			"qrepo run build-dt",
+			"qrepo run build-f",
+			"qrepo run build-md",
+			"qrepo run build-mf",
+			"qrepo run build-r",
+			"qrepo run build-say"
+		]
+	}
+}
