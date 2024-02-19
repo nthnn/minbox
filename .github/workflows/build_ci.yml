@@ -1,0 +1,24 @@
+name: Rust Build CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.21.2'
+
+      - name: Install Qrepo
+        run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/nthnn/Qrepo/master/support/install.sh)"
+
+      - name: Build commands
+        run: qrepo run build
