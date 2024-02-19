@@ -23,6 +23,8 @@ say [string...] # Echo strings in console.
 To get started with minbox, you need `qrepo`, `rustc`, and `cargo` installed on your system. Then, you can type the following on your command line:
 
 ```bash
+git clone https://github.com/nthnn/minbox.git --depth 1
+cd minbox
 qrepo run build
 ```
 
