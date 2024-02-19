@@ -1,0 +1,8 @@
+[package]
+name = "del"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+colored = "2.1.0"
+delete = "1.0.1"
